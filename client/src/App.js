@@ -17,8 +17,18 @@ import Signup from "./pages/Signup";
 // establish new connection to graphql server using apollo
 // need absolute path
 const client = new ApolloClient({
+  request: operation => {
+    const token = localStorage.getItem('id_token');
+// automatically sets header to token before every http request
+    operation.setContext({
+      headers: {
+        authorization: token ? `Bearer ${token}` : ''
+      }
+    });
+  },
   uri: "/graphql",
 });
+
 function App() {
   return (
     <ApolloProvider client={client}>
