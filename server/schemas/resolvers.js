@@ -1,6 +1,7 @@
 const { User, Thought } = require('../models');
-const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
+const { AuthenticationError } = require('apollo-server-express');
+
 
 // data coming from above const, so no parameters needed here
 // but can be set up to pass the data source, aka database model
