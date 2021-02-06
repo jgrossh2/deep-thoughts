@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/jgrossh2/deep-thoughts#readme",
   "dependencies": {
+    "bcrypt": "^5.0.0",
     "if-env": "^1.0.4"
   },
   "devDependencies": {
